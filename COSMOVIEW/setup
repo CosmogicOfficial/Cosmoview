@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+import os
+
+os.system('sudo apt-get update')
+os.system('sudo apt-get upgrade')
+a= os.system('pwd')
+print(a)
+a = input("press 1 if your chrome version is 83 \npress 2 if your chrome version is 84\nEnter :- ")
+if(a==1):
+	x1= a + 'chromev83/chromedriver'
+	print(x1)
+	os.system('sudo cp' + x1 +'/usr/local/bin')
+else :
+	x2= a+ 'chromev84/chromedriver'
+	os.system('sudo cp' + x2 +'/usr/local/bin')
+x3 = a + 'Firefox/geckodriver'
+os.system('sudo cp' + x3 +'/usr/local/bin')
+os.system('sudo apt install python3-pip')
+os.system('pip3 install -U selenium')
+os.system('sudo chmod +x CosmoView')
+os.system('sudo apt-get install toilet')

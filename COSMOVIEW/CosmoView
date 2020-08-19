@@ -1,0 +1,217 @@
+#!/usr/bin/python3
+from selenium import webdriver
+import os
+ 
+global bro
+exitlist = []
+ 
+os.system('toilet -f ivrit -F gay CosmoView')
+print('---------------Developed By Cosmogic--------------- \n\n\n\n')
+def SelectBrowser():
+	global bro
+	selbro = input('press 1 for Firefox \npress 2 for Chrome \nEnter :- ')
+	if(selbro == '1'):
+		bro = webdriver.Firefox()
+	else:
+		bro = webdriver.Chrome()
+ 
+	
+def OpenFile():
+ 	global OPF
+ 	x = input('To open local file press 1 \nTo open any site press 2 \nEnter :- ')
+ 	if(x == "1"):
+ 		s=input("enter complete file location\n")
+ 		OPF = 'file://'+s
+ 	else:
+ 		OPF=input("Enter complete url with https/http\n")
+
+ 	menu()
+ 
+ 
+def SelectBrowser():
+	global bro
+	selbro = input('press 1 for Firefox \npress 2 for Chrome \nEnter :- ')
+	if(selbro == '1'):
+		bro = webdriver.Firefox()
+	else:
+		bro = webdriver.Chrome()
+	
+
+ 
+def iPhone11ProMax():
+	global dri1
+	SelectBrowser()
+	dri1 = bro
+	dri1.set_window_size(414,869)
+	dri1.get(OPF)
+	exitlist.append('dri1')
+	menu()
+
+def iPhone11Pro():
+	global dri2
+	SelectBrowser()
+	dri2 = bro
+	dri2.set_window_size(375,812)
+	dri2.get(OPF)
+	exitlist.append('dri2')
+	menu()
+
+def GooglePixel2XL():
+	global dri3
+	SelectBrowser()
+	dri3 = bro
+	dri3.set_window_size(411,823)
+	dri3.get(OPF)
+	exitlist.append('dri3')
+	menu()
+
+def GooglePixelXL():
+	global dri4
+	SelectBrowser()
+	dri4 = bro
+	dri4.set_window_size(411,731)
+	dri4.get(OPF)
+	exitlist.append('dri4')
+	menu()
+
+	 
+
+def SamsungS10():
+	global dri5
+	SelectBrowser()
+	dri5 = bro
+	dri5.set_window_size(360,760)
+	dri5.get(OPF)
+	exitlist.append('dri5')
+	menu()
+
+def Display1():
+	global dri6
+	SelectBrowser()
+	dri6 = bro
+	dri6.set_window_size(1920,1080)
+	dri6.get(OPF)
+	exitlist.append('dri6')
+	menu()
+
+def Display2():
+	global dri7
+	SelectBrowser()
+	dri7 = bro
+	dri7.set_window_size(1680,1050)
+	dri7.get(OPF)
+	exitlist.append('dri7')
+	menu()	
+
+def Display3():
+	global dri8
+	SelectBrowser()
+	dri8 = bro
+	dri8.set_window_size(1600,900)
+	dri8.get(OPF)
+	exitlist.append('dri8')
+	menu()
+
+def Display4():
+	global dri9
+	SelectBrowser()
+	dri9 = bro
+	dri9.set_window_size(1600,900)
+	dri9.get(OPF)
+	exitlist.append('dri9')
+	menu()
+
+def Custom():
+	global dri10
+	x=int(input("value of x :- "))
+	y=int(input("value of y :- "))
+	SelectBrowser()
+	dri10 = bro
+	dri10.set_window_size(x,y)
+	dri10.get(OPF)
+	exitlist.append('dri10')
+	menu()
+ 
+def menu():
+	global K
+	os.system('clear')
+	os.system('toilet -f ivrit -F gay CosmoView')
+	print('---------------Developed By Cosmogic--------------- \n\n\n\n')
+	print("Choose your desired option")
+	print("1 ->  Select File or site to open")
+	print("2 -> Exit")
+	print("3 -> iPhone 11 Pro Max    8  -> Display1")
+	print("4 -> iPhone 11 Pro        9  -> Display2")
+	print("5 -> Google Pixel 2XL     10 -> Display3")
+	print("6 -> Google Pixel XL      11 -> Display4")
+	print("7 -> Samsung S10          12 -> Custome Size")
+	K=input("your Choice :- ")
+	if(K=="1"):
+		OpenFile()
+	elif(K=="2"):
+		moveout()
+	elif(K=="3"):
+		iPhone11ProMax()
+	elif(K=="4"):
+		iPhone11Pro()
+	elif(K=="5"):
+		GooglePixel2XL()
+	elif(K=="6"):
+		GooglePixelXL()
+	elif(K=="7"):
+		SamsungS10()
+	elif(K=="8"):
+		Display1()
+	elif(K=="9"):
+		Display2()
+	elif(K=="10"):
+		Display3()
+	elif(K=="11"):
+		Display4()
+	elif(K=="12"):
+		Custom()
+	else:
+		print("Option not available try again")
+		menu()
+
+
+
+def moveout():
+	for x in exitlist:
+		if(x=='dri1'):
+			dri1.quit()
+		elif(x=='dri2'):
+			dri2.quit()
+		elif(x=='dri3'):
+			dri3.quit()
+		elif(x=='dri4'):
+			dri4.quit()
+		elif(x=='dri5'):
+			dri5.quit()
+		elif(x=='dri6'):
+			dri6.quit()
+		elif(x=='dri7'):
+			dri7.quit()
+		elif(x=='dri8'):
+			dri8.quit()
+		elif(x=='dri9'):
+			dri9.quit()
+		elif(x=='dri10'):
+			dri10.quit()
+		else:
+			final()
+	final()
+
+def final():
+	os.system('clear')
+	print('ThankYou for using Cosmoview \n for suggestions \n')
+	print('Linkedin  :- https://www.linkedin.com/company/cosmogic/')
+	print('Instagram :- https://www.instagram.com/cosmogicofficial/')
+	print('Twitter   :- https://twitter.com/WeAreCosmogic')
+	print('Facebook  :- https://www.facebook.com/cos.mogic.7')
+	print('Email     :- cosmogic.com@gmail.com')
+	exit()
+
+
+OpenFile()
+menu()
